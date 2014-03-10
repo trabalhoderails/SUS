@@ -1,0 +1,8 @@
+class CreateInternacaos < ActiveRecord::Migration
+  def change
+    create_table :internacaos do |t|
+
+      t.timestamps
+    end
+  end
+end
