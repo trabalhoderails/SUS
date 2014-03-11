@@ -53,4 +53,10 @@ SUS::Application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+  
+  resources :pacientes
+  resources :internacaos
+  resources :hospitals
+  resources :enfermeiros
+  resources :medicos
 end

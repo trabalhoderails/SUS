@@ -1,0 +1,31 @@
+<h1>Listing enfermeiros</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Matricula</th>
+      <th>Cargo</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @enfermeiros.each do |enfermeiro| %>
+      <tr>
+        <td><%= enfermeiro.nome %></td>
+        <td><%= enfermeiro.matricula %></td>
+        <td><%= enfermeiro.cargo %></td>
+        <td><%= link_to 'Show', enfermeiro %></td>
+        <td><%= link_to 'Edit', edit_enfermeiro_path(enfermeiro) %></td>
+        <td><%= link_to 'Destroy', enfermeiro, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Enfermeiro', new_enfermeiro_path %>

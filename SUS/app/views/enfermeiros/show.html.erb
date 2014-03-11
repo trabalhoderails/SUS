@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nome:</strong>
+  <%= @enfermeiro.nome %>
+</p>
+
+<p>
+  <strong>Matricula:</strong>
+  <%= @enfermeiro.matricula %>
+</p>
+
+<p>
+  <strong>Cargo:</strong>
+  <%= @enfermeiro.cargo %>
+</p>
+
+<%= link_to 'Edit', edit_enfermeiro_path(@enfermeiro) %> |
+<%= link_to 'Back', enfermeiros_path %>

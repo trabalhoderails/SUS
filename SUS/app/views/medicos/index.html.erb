@@ -1,0 +1,31 @@
+<h1>Listing medicos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Matricula</th>
+      <th>Especialidade</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @medicos.each do |medico| %>
+      <tr>
+        <td><%= medico.nome %></td>
+        <td><%= medico.matricula %></td>
+        <td><%= medico.especialidade %></td>
+        <td><%= link_to 'Show', medico %></td>
+        <td><%= link_to 'Edit', edit_medico_path(medico) %></td>
+        <td><%= link_to 'Destroy', medico, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Medico', new_medico_path %>

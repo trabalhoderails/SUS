@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Paciente:</strong>
+  <%= @internacao.paciente %>
+</p>
+
+<p>
+  <strong>Medico:</strong>
+  <%= @internacao.medico %>
+</p>
+
+<p>
+  <strong>Enfermeiro:</strong>
+  <%= @internacao.enfermeiro %>
+</p>
+
+<p>
+  <strong>Entrada:</strong>
+  <%= @internacao.entrada %>
+</p>
+
+<p>
+  <strong>Saida:</strong>
+  <%= @internacao.saida %>
+</p>
+
+<%= link_to 'Edit', edit_internacao_path(@internacao) %> |
+<%= link_to 'Back', internacaos_path %>

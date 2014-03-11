@@ -1,0 +1,35 @@
+<h1>Listing internacaos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Paciente</th>
+      <th>Medico</th>
+      <th>Enfermeiro</th>
+      <th>Entrada</th>
+      <th>Saida</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @internacaos.each do |internacao| %>
+      <tr>
+        <td><%= internacao.paciente %></td>
+        <td><%= internacao.medico %></td>
+        <td><%= internacao.enfermeiro %></td>
+        <td><%= internacao.entrada %></td>
+        <td><%= internacao.saida %></td>
+        <td><%= link_to 'Show', internacao %></td>
+        <td><%= link_to 'Edit', edit_internacao_path(internacao) %></td>
+        <td><%= link_to 'Destroy', internacao, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Internacao', new_internacao_path %>
