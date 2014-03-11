@@ -1,2 +1,3 @@
-class Enfermeiro < ActiveRecord::Base
+class Enfermeiro < Empregado
+	has_and_belongs_to_many :internacaos
 end

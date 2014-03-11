@@ -3,6 +3,8 @@ class CreateEmpregados < ActiveRecord::Migration
     create_table :empregados do |t|
 			t.string :nome
 			t.string :matricula
+			
+			
       t.timestamps
     end
   end
